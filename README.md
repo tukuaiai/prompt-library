@@ -168,7 +168,7 @@ python main.py --select "prompt_excel/prompt (3).xlsx"
 
 ## 👥 作者
 
-- **fud114514** - [GitHub Profile](https://github.com/fud114514)
+- **tukaui** - [GitHub Profile](https://github.com/tukuaiai)
 
 ## 🙏 致谢
 
