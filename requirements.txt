@@ -1,0 +1,6 @@
+rich
+InquirerPy
+pandas
+openpyxl
+PyYAML
+python-dotenv

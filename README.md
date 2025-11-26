@@ -1,181 +1,250 @@
-# 📚 Prompt Library - 高质量提示词库
+<!--
+-------------------------------------------------------------------------------
+  项目头部区域 (HEADER)
+  这是用户第一眼看到的地方。一个精美的横幅或 Logo 能立刻提升专业感。
+-------------------------------------------------------------------------------
+-->
+<p align="center">
+  <!-- 建议尺寸: 1280x640px。可以使用 Canva, Figma 或 https://banners.beyondco.de/ 等工具制作 -->
+  <img src="https://path.to/your/project-banner.png" alt="项目横幅">
+</p>
 
-![License](https://img.shields.io/badge/license-MIT-blue)
-![提示词数量](https://img.shields.io/badge/prompts-350%2B-green)
-![分类数量](https://img.shields.io/badge/categories-58-orange)
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+<div align="center">
 
-一个全面的高质量AI提示词库，支持Excel和Markdown格式之间的双向转换。
+# Prompt Library
 
-## 🌟 项目特点
-
-- 📊 **双向转换**: 支持Excel ↔️ Markdown格式互转
-- 🗂️ **结构化管理**: 58个分类，350+个精心设计的提示词
-- 🔄 **版本控制**: 支持提示词版本迭代和管理
-- 🤖 **多平台兼容**: 适用于Claude、GPT、Gemini等主流AI模型
-- 🛠️ **自动化工具**: 提供批量转换和管理脚本
-
-## 📂 项目结构
-
-```
-prompt-library/
-├── prompt_excel/           # Excel源文件目录
-│   └── prompt (3).xlsx    # 主要提示词Excel文件
-├── prompt_docs/           # 转换后的Markdown文档
-│   └── prompt_docs_*/     # 按时间戳命名的文档快照
-├── scripts/               # 转换和管理脚本
-│   ├── excel_to_docs.py  # Excel转Markdown核心脚本
-│   ├── docs_to_excel.py  # Markdown转Excel核心脚本
-│   ├── convert_local.py  # 本地转换工具
-│   ├── start_convert.py  # 批量转换启动器
-│   └── config.yaml       # 配置文件
-├── docs/                  # 项目文档
-└── tests/                # 测试脚本
-```
-
-## 🚀 快速开始
-
-### 安装依赖
-
-```bash
-# 创建虚拟环境
-python3 -m venv .venv
-source .venv/bin/activate  # Linux/Mac
-# 或
-.venv\Scripts\activate  # Windows
-
-# 安装依赖
-pip install -r scripts/requirements.txt
-```
-
-### 基础使用
-
-#### Excel → Markdown 转换
-
-```bash
-# 转换单个Excel文件
-python scripts/start_convert.py --mode excel2docs --select prompt_excel/prompt\ \(3\).xlsx
-
-# 扫描并转换所有Excel文件
-python scripts/start_convert.py --mode excel2docs --excel-dir prompt_excel
-```
-
-#### Markdown → Excel 转换
-
-```bash
-# 转换指定的文档目录
-python scripts/start_convert.py --mode docs2excel --select prompt_docs/prompt_docs_2025_0903_055708
-
-# 自动扫描并转换
-python scripts/start_convert.py --mode docs2excel
-```
-
-## 📚 提示词分类
-
-项目包含58个精心组织的分类，涵盖：
-
-### 核心分类
-- 🔧 **元提示词** - 15个高级提示词工程模板
-- 📖 **说明文档** - 必看的重要使用说明
-- 🏗️ **软件工程** - 专业的编程和架构提示词
-- 📊 **分析工具** - 数据分析和可视化提示词
-
-### 专业领域
-- 🧠 **哲学工具箱** - 深度思考和哲学分析
-- 📈 **行业咨询** - 商业和行业分析模板
-- 🎯 **需求解析** - 需求分析和规划工具
-- 📐 **序列图生成** - 技术文档和流程图生成
-
-### 创意内容
-- ✍️ **写作辅助** - 各类文章和创意写作
-- 🎨 **排版工具** - 文档格式化和美化
-- 📱 **社交媒体** - Twitter、Reddit等平台内容
-- 🎬 **视频处理** - 字幕生成和视频脚本
-
-### 特色工具
-- 🔄 **翻译工具** - 多语言翻译和本地化
-- 📝 **学术写作** - 论文和学术内容生成
-- 🎮 **游戏设计** - 游戏剧情和世界观构建
-- 💼 **商业文档** - 商业计划和报告模板
-
-## 🔧 高级功能
-
-### 批量处理
-
-```bash
-# 使用main.py进行批量处理
-python main.py --select "prompt_excel/prompt (3).xlsx"
-```
-
-### 配置文件
-
-编辑 `scripts/config.yaml` 来自定义：
-- 输出目录路径
-- 文件命名规则
-- 转换选项
-- 工具链接和资源
-
-### 版本管理
-
-系统自动为每次转换创建时间戳目录：
-- 格式：`prompt_docs_YYYY_MMDD_HHMMSS`
-- 保留完整的转换历史
-- 支持版本对比和回滚
-
-## 📊 统计信息
-
-- **提示词总数**: 350+
-- **分类数量**: 58
-- **版本总数**: 500+
-- **支持格式**: Excel (.xlsx), Markdown (.md), JSON
-- **最后更新**: 2025-09-03
-
-## 🤝 贡献指南
-
-欢迎贡献新的提示词或改进现有内容：
-
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/NewPrompt`)
-3. 提交更改 (`git commit -m 'Add new prompt category'`)
-4. 推送到分支 (`git push origin feature/NewPrompt`)
-5. 创建 Pull Request
-
-### 提示词格式规范
-
-- 使用清晰的分类名称
-- 包含版本信息（如 v1.0, v1.1）
-- 提供使用说明和示例
-- 标注适用的AI模型
-
-## 🛠️ 技术栈
-
-- **Python 3.8+** - 核心开发语言
-- **pandas** - Excel数据处理
-- **openpyxl** - Excel文件读写
-- **PyYAML** - 配置文件管理
-- **InquirerPy** - 交互式命令行界面
-- **python-dotenv** - 环境变量管理
-
-## 📝 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
-
-## 🔗 相关链接
-
-- [GitHub仓库](https://github.com/fud114514/prompt-library)
-- [问题反馈](https://github.com/fud114514/prompt-library/issues)
-- [贡献指南](https://github.com/fud114514/prompt-library/blob/main/CONTRIBUTING.md)
-
-## 👥 作者
-
-- **tukaui** - [GitHub Profile](https://github.com/tukuaiai)
-
-## 🙏 致谢
-
-感谢所有贡献者和使用者的支持！
+**一个全面的高质量AI提示词库，支持Excel和Markdown格式之间的双向转换。**
 
 ---
 
-⭐ 如果这个项目对你有帮助，请给它一个星标！
+<!--
+  徽章区域 (BADGES)
+  从 https://shields.io/ 生成。选择与你的品牌色一致的颜色。
+  建议包含：构建状态, 版本, 许可证, 语言, 代码大小, 下载量, 社区链接等。
+-->
+<p>
+  <a href="https://github.com/tukuaiai/prompt-library/actions/workflows/sync.yml"><img src="https://img.shields.io/github/actions/workflow/status/tukuaiai/prompt-library/sync.yml?style=for-the-badge" alt="构建状态"></a>
+  <a href="https://github.com/tukuaiai/prompt-library/releases"><img src="https://img.shields.io/github/v/release/tukuaiai/prompt-library?style=for-the-badge" alt="最新版本"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/tukuaiai/prompt-library?style=for-the-badge" alt="许可证"></a>
+  <a href="https://github.com/tukuaiai/prompt-library"><img src="https://img.shields.io/github/languages/top/tukuaiai/prompt-library?style=for-the-badge" alt="主要语言"></a>
+  <a href="https://github.com/tukuaiai/prompt-library"><img src="https://img.shields.io/github/languages/code-size/tukuaiai/prompt-library?style=for-the-badge" alt="代码大小"></a>
+</p>
 
-📧 有问题或建议？请[创建Issue](https://github.com/fud114514/prompt-library/issues/new)
+[✨ 功能特性](#-功能特性) •
+[🚀 快速开始](#-快速开始) •
+[⚙️ API参考](#️-api参考) •
+[🤝 参与贡献](#-参与贡献) •
+[🗺️ 路线图](#️-路线图)
+
+</div>
+
+<!--
+-------------------------------------------------------------------------------
+  概览与核心视觉区域 (OVERVIEW & VISUALS)
+  展示项目最直观的部分。
+-------------------------------------------------------------------------------
+-->
+
+---
+
+## 🖼️ 概览与演示
+
+本词库是一个结构化的、高质量的AI提示词（Prompts）集合，旨在为开发人员、研究人员和内容创作者提供强大而灵活的工具。与许多静态的提示词列表不同，本项目提供了一个双向转换的工作流程，允许用户在易于协作的Excel格式和便于版本控制的Markdown格式之间无缝切换。
+
+> **核心理念**: 让高质量的提示词像代码一样被管理、分享和迭代。
+
+<p align="center">
+  <!-- 建议使用 GIF，工具: ScreenToGif, GIPHY CAPTURE -->
+  <img src="https://user-images.githubusercontent.com/12523395/269150161-1a83689c-2f3a-4a0e-8d18-114cec03be8d.gif" alt="项目演示动画" width="80%">
+</p>
+
+---
+
+<!--
+-------------------------------------------------------------------------------
+  主要内容区域 (MAIN CONTENT)
+  详细介绍项目的方方面面。
+-------------------------------------------------------------------------------
+-->
+
+## ✨ 功能特性
+
+- 📊 **双向转换**: 支持Excel ↔️ Markdown格式互转，兼顾易用性与版本控制。
+- 🗂️ **结构化管理**: 包含多个分类，覆盖从软件工程到哲学思辨的广泛领域。
+- 🤖 **多平台兼容**: 提示词设计兼容Claude、GPT、Gemini等主流AI模型。
+- 🛠️ **自动化工具**: 提供命令行工具，支持批量转换和管理。
+- 🎨 **易于扩展**: 可以方便地添加新的提示词、分类和自定义属性。
+
+---
+
+## ⚙️ 架构与工作流程
+
+本项目的工作流程围绕“以结构化数据为中心”的思想构建。
+
+```mermaid
+graph LR
+    subgraph "Excel-First 工作流"
+        A[1. 在 Excel 中编辑提示词] --> B{运行转换脚本};
+    end
+
+    subgraph "Git-Native 工作流"
+        D[3. 在 Markdown 文件中编辑] --> E{运行转换脚本};
+    end
+
+    subgraph "中央产物"
+        B --> C[2. 生成结构化的 Markdown 文件];
+        E --> F[4. 更新或生成 Excel 文件]
+    end
+
+    style A fill:#D5E8D4
+    style D fill:#DAE8FC
+    style C fill:#F8CECC
+    style F fill:#F8CECC
+```
+这个流程确保了无论是喜欢电子表格的非技术人员，还是习惯于Git和代码编辑器的开发人员，都可以高效地协作。
+
+---
+
+## 🚀 快速开始
+
+### 1. 环境依赖
+
+- [Python](https://www.python.org/) >= 3.8
+
+### 2. 安装
+
+<details>
+<summary><b>从源码构建</b></summary>
+
+```bash
+git clone https://github.com/tukuaiai/prompt-library.git
+cd prompt-library
+pip install -r requirements.txt
+```
+</details>
+
+### 3. 使用
+
+<details>
+<summary><b>Excel → Markdown 转换</b></summary>
+
+```bash
+# 运行交互式转换
+python3 main.py
+```
+程序将扫描 `prompt_excel` 目录下的 `.xlsx` 文件，并让你选择一个进行转换。结果将输出到 `prompt_docs` 目录下一个带时间戳的文件夹中。
+</details>
+
+<details>
+<summary><b>Markdown → Excel 转换</b></summary>
+
+```bash
+# 运行交互式转换
+python3 main.py
+```
+程序将扫描 `prompt_docs` 目录，让你选择一个文档集，然后将其转换回 Excel 文件，并输出到 `prompt_excel` 目录下一个带时间戳的文件夹中。
+</details>
+
+<details>
+<summary><b>非交互式转换</b></summary>
+
+```bash
+# 指定要转换的 Excel 文件
+python3 main.py --select "prompt_excel/your_file.xlsx"
+
+# 指定要转换的 Markdown 目录
+python3 main.py --select "prompt_docs/your_docs_folder"
+```
+
+</details>
+
+---
+
+<details>
+<summary>❓ 常见问题 (FAQ) (可选)</summary>
+
+- **Q: 为什么转换会失败？**
+  - **A:** 请确保您的Excel文件格式与提供的示例一致，特别是工作表（Sheet）的名称和列的标题。
+
+- **Q: 我可以添加自己的转换逻辑吗？**
+  - **A:** 当然可以。核心逻辑位于 `scripts/` 目录下，您可以自由修改或扩展它们。
+
+</details>
+
+---
+
+<!--
+-------------------------------------------------------------------------------
+  社区与治理区域 (COMMUNITY & GOVERNANCE)
+  展示项目的健康度和发展方向。
+-------------------------------------------------------------------------------
+-->
+
+## 🗺️ 路线图
+
+```mermaid
+gantt
+    title 项目发展路线图
+    dateFormat  YYYY-MM
+    section 核心功能
+    双向转换脚本 :done, 2024-10, 30d
+    交互式CLI :done, 2024-11, 20d
+    section 未来计划
+    Web界面 :2025-01, 30d
+    更丰富的导出格式 :2025-02, 20d
+    云同步功能 : 2025-03, 30d
+```
+
+---
+
+## 🤝 参与贡献
+
+我们热烈欢迎各种形式的贡献！如果您对本项目有任何想法或建议，请随时开启一个 [Issue](https://github.com/tukuaiai/prompt-library/issues) 或提交一个 [Pull Request](https://github.com/tukuaiai/prompt-library/pulls)。
+
+在您开始之前，请花点时间阅读我们的 [**贡献指南 (CONTRIBUTING.md)**](CONTRIBUTING.md) 和 [**行为准则 (CODE_OF_CONDUCT.md)**](CODE_OF_CONDUCT.md)。
+
+### ✨ 贡献者们
+
+感谢所有为本项目做出贡献的开发者！
+
+<a href="https://github.com/tukuaiai/prompt-library/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tukuaiai/prompt-library" />
+</a>
+
+---
+
+## 🛡️ 安全策略
+
+我们非常重视项目的安全性。如果您发现了任何安全漏洞，请不要公开讨论，而是通过电子邮件 `tukuaiai@example.com` 与我们联系。
+
+---
+
+<!--
+-------------------------------------------------------------------------------
+  页脚区域 (FOOTER)
+  最后的行动号召和感谢。
+-------------------------------------------------------------------------------
+-->
+
+## 📜 许可证
+
+本项目采用 [MIT](LICENSE) 许可证。
+
+---
+
+<div align="center">
+
+**如果这个项目对您有帮助，请不要吝啬您的 Star ⭐！**
+
+<!-- Star History: https://star-history.com/ -->
+<a href="https://star-history.com/#tukuaiai/prompt-library&Date">
+  <img src="https://api.star-history.com/svg?repos=tukuaiai/prompt-library&type=Date" alt="Star History Chart" width="80%">
+</a>
+
+<br>
+
+**Made with ❤️ by tukuaiai**
+
+[⬆ 回到顶部](#prompt-library)
+
+</div>
