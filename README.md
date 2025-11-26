@@ -6,7 +6,7 @@
 -->
 <p align="center">
   <!-- 建议尺寸: 1280x640px。可以使用 Canva, Figma 或 https://banners.beyondco.de/ 等工具制作 -->
-  <img src="https://path.to/your/project-banner.png" alt="项目横幅">
+  <img src="https://github.com/tukuaiai.png" alt="项目横幅">
 </p>
 
 <div align="center">
